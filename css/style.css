@@ -1,0 +1,305 @@
+html{
+    height: 100%;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+}
+
+body{
+    height: 100%;
+    font-family: sans-serif;
+
+}
+/*Background gradient colors*/
+#backgrounds{
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+}
+#blue{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*Variable background*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #598fc8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #598fc8 0%, #8ab8de 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #598fc8 0%,#8ab8de 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #598fc8 0%,#8ab8de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#598fc8', endColorstr='#8ab8de',GradientType=0 ); /* IE6-9 */
+}
+#red{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*Variable background*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #598fc8; /* Old browsers */
+    background: -moz-linear-gradient(top,  red 0%, orange 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  red 0%,orange 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  red 0%, orange 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#598fc8', endColorstr='#8ab8de',GradientType=0 ); /* IE6-9 */
+}
+
+/*Main layout*/
+#mainPage{
+    width: 85%; /* When changed don't forget to change #dashboard.width & #logo.left (0.5 * width) */
+    height: 100%;
+    float: left;
+}
+
+#dashboard{
+    display: block;
+    width: 1%;
+    height: 100%;
+    background-color: #17222C;
+    float: right;
+    color: white;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px 2px black;
+}
+
+#climateSelection, #tempSelection, #colorSelection{
+    top: 70%;
+    margin-top:10%;
+    height: 40%;
+    width: 100%;
+    z-index: 999;
+    position: relative;
+
+}
+
+#climateSelection{
+    opacity: 0;
+    display: none;
+}
+#tempSelection{
+    opacity: 0;
+    display: none;
+}
+#colorSelection{
+    opacity: 0;
+    display: none;
+}
+
+.item{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.4em;
+}
+.textSelect{
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    text-align: center;
+    color: white;
+}
+.infoSelect{
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+    margin-top: 10px;
+}
+.timeSelect{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+}
+
+.item input{
+    display: inline-block;
+    width: 4%;
+    height: 20px;
+    margin-left: 43.5%;
+}
+#climateSubmit, #tempSubmit, #colorSubmit{
+    margin: 0 auto;
+    font-size: 1.2em;
+    display: block;
+    padding: 4px;
+    margin-top: 15px;
+}
+
+/*Maincontent styling*/
+#dashboardTitle{
+    background-color: #2b3f79;
+    padding: 10px 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+}
+
+#logo{
+    position: absolute;
+    left: 42.5%;
+    top: 50%;
+    margin-left: -169.5px; /*(half of width logo)*/
+    margin-top: -169.5px;
+    z-index: 999;
+}
+#home{
+    position: absolute;
+    left: 42.5%;
+    display: block;
+    opacity: 0;
+    top: 15%;
+    margin-top: -100px;
+    width: 200px;
+    margin-left: -100px;
+}
+
+#climate, #color, #TEMP{
+    display: none;
+}
+#climate{
+    width: 220px;
+}
+
+#color{
+    width: 220px;
+}
+#TEMP{
+    width: 220px;
+}
+
+
+#menu{
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    max-width: 780px;
+    height: 250px;
+}
+
+.menu{
+    margin: 0 auto;
+    float: left;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/*Dashboard styling*/
+
+.subDashboard{
+    padding: 10px 0;
+    border-top: 1px white solid;
+}
+
+#climateLog, #tempLog{
+    width: 50%;
+    float: left;
+    height: 100px;
+
+}
+#statusDashboard{
+    text-align: center;
+}
+
+
+        /*Datalog*/
+#dataLog{
+    background-color: #1a284e;
+}
+
+.subData{
+    width: 100%;
+    min-height: 25px;
+    display: block;
+    text-align: center;
+}
+
+.subData p{
+    display: inline;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+        /*Temperature*/
+#tempLog{
+    background-color: #2f4176;
+
+}
+
+.arrowUp{
+    width: 20px;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.arrowDown{
+    width: 20px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.dataAmountSmall{
+    font-size: 0.8em!important;
+}
+
+
+        /*Food*/
+.foodBar{
+    width: 80%;
+    padding: 2px;
+    margin: 10px auto;
+    height: 15px!important;
+    background: darkgray!important;
+}
+
+.foodBar div{
+    background: limegreen;
+}
+#foodLog{
+    padding: ;
+    background-color: #1a284e;
+}
+#foodTitle{
+    line-height: 1.6em;
+}
+
+#foodLog p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.2em;
+}
+        /*Climate*/
+#climateLog{
+    background-color: #223363;
+}
+
+#manual{
+    margin: 15px auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    color: white;
+}
+#tempUp {
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-180deg);
+}
+
+.tempSelect{
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+}
+#manualColor{
+    height:64px;
+
+}
+
+#tempSubmit{
+    margin-top: 15px;
+}

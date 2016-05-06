@@ -5,7 +5,7 @@ this is a project made for aquarium climate control. Not all changes can be show
 Notes:
 - This application makes use of the plugin jquery-minicolors.
 - The application is made to keep refreshing using AJAX-calls.
-- Animation done by library: jQuery
+- Animation done with library: jQuery
 
 Dont forget to fill in your localhost settings in the "Settings.php"
 
